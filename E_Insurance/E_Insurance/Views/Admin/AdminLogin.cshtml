@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "AdminLogin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .page-head-line {
+        font-weight: 900;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #F0677C;
+        text-transform: uppercase;
+        color: #F0677C;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+</style>
+<!--Admin Login Page-->
+<div class="col-md-6">
+    <div class="panel panel-info">
+        <div class="panel-heading text-center" style="text-transform: uppercase;">Admin Login</div>
+        <div class="panel-body">
+
+            @using (Html.BeginForm("AdminLogin", "Admin", FormMethod.Post))
+            {
+                <div class="form-horizontal">
+                    <h4 style="color: red; text-align: center">@ViewBag.AdminNotExist</h4>
+
+                    <div class="form-group">
+                        <label for="username" class="control-label col-md-2">Username</label>
+                        <div class="col-md-10">
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Enter Your Username">
+                            <h6 class="text-danger">@ViewBag.Username</h6>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adminPassword" class="control-label col-md-2">Password</label>
+                        <div class="col-md-10">
+                            <input type="password" id="adminPassword" name="adminPassword" class="form-control" placeholder="Enter Your Password">
+                            <h6 class="text-danger">@ViewBag.AdminPassword</h6>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <button type="submit" class="btn btn-success">
+                                Login <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/dataTables.bootstrap.min.css">
+
+</head>
+<body style="background-image:url(../../Content/img/background.png);background-attachment: fixed">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("E-Insurance", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand", style = "text-transform: uppercase" })
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid body-content">
+        <br />
+        <div class="row">
+            <div class="col-md-3">
+                <div class="navbar-collapse collapse">
+                    <div id="admin-responsive">
+                        <div class="alert alert-success text-center">
+                           
+                            <span class="glyphicon glyphicon-user"></span><span>@Html.Partial("_LoginPartial")</span>
+                            <br />
+                            <p><span class="glyphicon glyphicon-calendar"></span>@DateTime.Now.Date.ToLongDateString()</p>
+                        </div>
+                    </div>
+                    <br />
+                    <div id="admin-responsive">
+                        <ul class="nav nav-pills nav-stacked">
+                            
+                            <li>
+                                <a href="/Employer/Index"><span class="glyphicon glyphicon-tags"></span>&nbsp;Employers</a>
+                            </li>
+                            <li>
+                                <a href="/Claim/Index"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Claims</a>
+                            </li>
+
+                            <li>
+                                <a href="/Compliance/Index"><span class="glyphicon glyphicon-book"></span>&nbsp;Compliance Request</a>
+                            </li>
+                            @*<li>
+                                <a href="/Case/Index"><span class="glyphicon glyphicon-tags"></span>&nbsp;Cases</a>
+                            </li>*@
+                            
+                            <li>
+                                <a href="/Home/Index"><span class="glyphicon glyphicon-log-out"></span>&nbsp;LogOut</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="responsive">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript" src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/dataTables.bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#zctb').DataTable();
+        });
+    </script>
+</body>
+</html>

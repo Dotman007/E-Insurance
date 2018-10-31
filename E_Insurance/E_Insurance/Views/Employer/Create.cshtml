@@ -1,0 +1,282 @@
+﻿@model E_Insurance.Models.Employer
+
+@{
+    ViewBag.Title = "Employers Registration";
+    Layout = "~/Views/Shared/_LayoutReg.cshtml";
+}
+
+<style>
+    .page-head-line {
+        font-weight: 900;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #F0677C;
+        text-transform: uppercase;
+        color: #F0677C;
+        font-size: 20px;
+        margin-bottom: 40px;
+        font-family:'Franklin Gothic';
+    }
+</style>
+
+
+@using (Html.BeginForm("Create", "Employer", FormMethod.Post, new {enctype ="multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <br />
+        <br />
+        <h4 style="text-align:center">Employer Registration Page</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading text-center" style="text-transform: uppercase;"><strong> Particular of Business</strong></div>
+                <div class="panel-body">
+
+
+                    <div class="form-group">
+                        <label for="empName" class="control-label col-md-2">Employer Name</label>
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Employer_Name, new { @class = "form-control", @placeholder = "Enter Employer's Name" })
+                            @Html.ValidationMessageFor(model => model.Employer_Name, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="icpNo" class="control-label col-md-2">Incorp. No.</label>
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Incorporation_No, new { @class = "form-control", @placeholder = "Enter Incorporation No." })
+                            @Html.ValidationMessageFor(model => model.Incorporation_No, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="cac" class="control-label col-md-2">CAC</label>
+                        <div class="col-md-10">
+                            <input type="file" id="imagePath" name="files" title="Upload CAC" />
+                            @Html.ValidationMessageFor(model => model.CAC)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="logo" class="control-label col-md-2">Company Logo</label>
+                        <div class="col-md-10">
+                            <input type="file" id="imagePath" name="files" title="Upload Company Logo" />
+                            @Html.ValidationMessageFor(model => model.Company_Logo)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" class="control-label col-md-2">Address</label>
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Address, new { @class = "form-control", @placeholder = "Enter Address" })
+
+
+                            @*<input type="text" id="address" name="address" class="form-control" placeholder="Enter Address">*@
+                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Street_No, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Street_No, new { @class = "form-control", @placeholder = "Enter Street No." })
+
+
+                            @Html.ValidationMessageFor(model => model.Street_No, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.City, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.City, new { @class = "form-control", @placeholder = "Enter City" })
+
+
+                            @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Local_Govt, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Local_Govt, new { @class = "form-control", @placeholder = "Enter LGA" })
+
+
+                            @Html.ValidationMessageFor(model => model.Local_Govt, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.State, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.State, new { @class = "form-control", @placeholder = "Enter State" })
+
+
+                            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Postal_Address, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Postal_Address, new { @class = "form-control", @placeholder = "Enter Postal Address" })
+
+
+                            @Html.ValidationMessageFor(model => model.Postal_Address, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Telephone_No, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Telephone_No, new { @class = "form-control", @placeholder = "Enter Telephone No." })
+
+
+                            @Html.ValidationMessageFor(model => model.Telephone_No, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Fax_No, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Fax_No, new { @class = "form-control", @placeholder = "Enter Fax No." })
+
+
+                            @Html.ValidationMessageFor(model => model.Fax_No, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Enter Email Address" })
+
+
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading text-center" style="text-transform: uppercase;"><strong>Particular of Owner(s) of Organization</strong></div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.SurName, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.SurName, new { @class = "form-control", @placeholder = "Enter Surname" })
+
+
+                            @Html.ValidationMessageFor(model => model.SurName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FirstName, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", @placeholder = "Enter First Name" })
+
+
+                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MiddleName, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.MiddleName, new { @class = "form-control", @placeholder = "Enter Middle Name" })
+
+
+                            @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Position, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Position, new { @class = "form-control", @placeholder = "Enter Position" })
+
+
+                            @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Tel_No, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Tel_No, new { @class = "form-control", @placeholder = "Enter Mobile No." })
+
+
+                            @Html.ValidationMessageFor(model => model.Tel_No, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Mode_Of_Identification, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Mode_Of_Identification, new List<SelectListItem>
+                {
+                    new SelectListItem{ Text="Driver License", Value="Driver License"},
+                    new SelectListItem{ Text="Permanent Voter's Card", Value="Permanent Voter's Card"},
+                    new SelectListItem{Text="International Passport", Value="International Passport"}
+                    
+                }, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Mode_Of_Identification, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Business_Sector, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Business_Sector, new List<SelectListItem>
+                {
+                    new SelectListItem{ Text="Agriculture", Value="Agriculture"},
+                    new SelectListItem{ Text="Aviation", Value="Aviation"},
+                    new SelectListItem{Text="Banking and Finance", Value="Banking and Finance"},
+                    new SelectListItem{Text="Construction",Value="Construction"},
+                    new SelectListItem{Text="Energy", Value="Energy"},
+                    new SelectListItem{Text="Manufacturing", Value="Manufacturing"},
+                    new SelectListItem{Text="MDA's", Value="MDA's"},
+                    new SelectListItem{Text = "Mining", Value="Mining"},
+                    new SelectListItem{Text="Oil and Gas", Value ="Oil and Gas"},
+                    new SelectListItem{Text="Telecommunication", Value="Telecommunication"},
+                    new SelectListItem{Text="Others", Value="Others"}
+                }, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Business_Sector, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-success">
+                    Register <span class="glyphicon glyphicon-log-in" aria-hidden="true" ></span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+}
+
+
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }

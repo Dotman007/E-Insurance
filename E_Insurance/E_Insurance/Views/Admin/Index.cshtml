@@ -1,0 +1,47 @@
+﻿@model IEnumerable<E_Insurance.Models.Admin>
+
+@{
+    ViewBag.Title = "Admin Profile";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<br />
+
+<br />
+<h2 class="text-center">Admin(s)</h2>
+
+<p>
+    <a href="/Admin/Create" title="Add New Admin" role="button" class="btn btn-success">
+        <span class="glyphicon glyphicon-plus"></span>&nbsp;ADD NEW ADMIN
+    </a>
+</p>
+<table id="zctb" class="display table table-striped table-bordered table-hover table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    <a href="/Admin/Edit/@item.Id" title="Edit Admin" role="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+                    <a href="/Admin/Delete/@item.Id" title="Delete Admin" role="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+
+
+</table>

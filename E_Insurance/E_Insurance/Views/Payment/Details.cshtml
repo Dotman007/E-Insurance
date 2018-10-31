@@ -1,0 +1,43 @@
+﻿@model E_Insurance.Models.Payment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Payment</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employer.Employer_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employer.Employer_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Salary)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Payment_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

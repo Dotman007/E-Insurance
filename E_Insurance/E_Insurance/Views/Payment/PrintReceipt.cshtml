@@ -1,0 +1,74 @@
+﻿@model E_Insurance.Models.Payment
+
+@{
+    ViewBag.Title = "PrintReceipt";
+    Layout = "~/Views/Shared/_LayoutEmployer.cshtml";
+}
+
+<h2>Print Receipt</h2>
+
+<div>
+    <h4>Payment</h4>
+    <hr />
+    @{
+        var employer_Id = Model.Employer.Employer_Name;
+        var amount = Model.Amount;
+        var salary = Model.Employee_Salary;
+        var myTitle = employer_Id + " " + " PAYMENT RECEIPT";
+        var company = "e-Insurance";
+
+    }
+    
+    <input type="hidden" id="txtTitle" name="txtTitle" value="@myTitle" />
+    
+    <h3 class="panel-title" style="text-align:center">@company</h3>
+    <br />
+    <h3 class="panel-title">@myTitle</h3>
+    <div class="panel-body" id="dataexample3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" style="font-weight: 300">EMPLOYER NAME:</label>
+                    &nbsp;<label class="control-label">@employer_Id</label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" style="font-weight: 300">AMOUNT:</label>
+                &nbsp;<label class="control-label">@amount</label>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+        <div class="form-group">
+            <label class="control-label" style="font-weight: 300">SALARY:</label>
+            &nbsp;<label class="control-label">@salary</label>
+        </div>
+    </div>
+
+          
+        </div>
+        </div>
+    </div>
+    
+    <a id="printResult" class="btn btn-info">
+        <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print
+    </a>
+    @section Scripts {
+
+        <script src="~/Scripts/jquery-printme.js"></script>
+
+        <script type="text/javascript">
+
+            $("#printResult").click(function () {
+                var title = $("#txtTitle").val();
+                $("#dataexample3").printMe({
+                    "path": ["../../Content/print.css"],
+                    "title": title
+                });
+                return (false);
+            });
+
+        </script>
+    }

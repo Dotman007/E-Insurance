@@ -1,0 +1,102 @@
+﻿@model E_Insurance.Models.Employer
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutEmployer.cshtml";
+}
+
+
+<br />
+<div style="text-align: center">
+    <h2 class="h2-responsive">Company's Profile</h2><br />
+</div>
+
+
+<div>
+    
+   
+
+    <ul class="list-group">
+        @*<li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Registration_No):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Registration_No)</span>
+        </li>*@
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Employer_Name):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Employer_Name)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Incorporation_No):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Incorporation_No)</span>
+        </li>
+        @*<li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.CAC):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.CAC)</span>
+        </li>*@
+        @*<li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Company_Logo):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Company_Logo)</span>
+        </li>*@
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Address):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Address)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Street_No):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Street_No)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.City):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.City)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Local_Govt):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Local_Govt)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.State):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.State)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Postal_Address):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Postal_Address)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Telephone_No):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Telephone_No)</span>
+        </li>
+        
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Fax_No):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Fax_No)</span>
+        </li>
+    </ul>
+
+    @*<p>
+        <br />@Html.ActionLink("Change Password", "ChangePassword", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    </p>*@
+
+    
+   
+</div>
+
+<div style="text-align: center">
+    <h2 class="h2-responsive">Company Owner(s) Profile</h2><br />
+</div>
+
+<div>
+
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.SurName):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.SurName)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.FirstName):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.FirstName)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.MiddleName):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.MiddleName)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Position):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Position)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Tel_No):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Tel_No)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Mode_Of_Identification):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Mode_Of_Identification)</span>
+        </li>
+        <li class="list-group-item">
+            <b>@Html.DisplayNameFor(model => model.Business_Sector):</b> <span class="pull-xs-right">@Html.DisplayFor(model => model.Business_Sector)</span>
+        </li>
+
+    </ul>
+
+</div>

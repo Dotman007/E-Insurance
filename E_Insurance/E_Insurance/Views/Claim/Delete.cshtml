@@ -1,0 +1,361 @@
+﻿@model E_Insurance.Models.Claim
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Claim</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employer.Employer_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employer.Employer_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marital_Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marital_Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Of_Spouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Of_Spouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number_Of_Children)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number_Of_Children)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age_Of_Children)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age_Of_Children)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employer_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employer_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employer_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employer_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Of_Birth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Of_Birth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.First_Aid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.First_Aid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Report_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Report_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Of_First_Treatment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Of_First_Treatment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_Of_Specialist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_Of_Specialist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Registration_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registration_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Registration_Charge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registration_Charge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Consultation_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Consultation_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Consultation_Charge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Consultation_Charge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Admission_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Admission_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Admission_Charge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Admission_Charge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medical_Procedure_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medical_Procedure_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medical_Procedure_Charge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medical_Procedure_Charge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drug_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drug_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drug_Charge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drug_Charge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Laboratory_Service_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Laboratory_Service_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Laboratory_Service_Charge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Laboratory_Service_Charge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_Of_Account)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_Of_Account)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Account_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sort_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sort_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bank_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bank_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Treatment_Receipt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Treatment_Receipt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details_Of_Bills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details_Of_Bills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Passport_Photograph)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Passport_Photograph)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Police_Report)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Police_Report)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

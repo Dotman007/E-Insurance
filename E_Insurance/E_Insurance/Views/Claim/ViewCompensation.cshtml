@@ -1,0 +1,104 @@
+﻿@model E_Insurance.Models.Claim
+
+@{
+    ViewBag.Title = "ViewCompensation";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center">View Compensation</h2>
+
+<div>
+   <hr />
+    <dl class="list-group">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employer.Employer_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employer.Employer_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_FirstName)
+        </dd>
+
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.Name_Of_Account)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name_Of_Account)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Account_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sort_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sort_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bank_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bank_Name)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Compensation)
+        </dt>
+
+        <dd>
+            #@Html.DisplayFor(model => model.Compensation)
+        </dd>
+
+       
+    </dl>
+</div>
+
+<p>
+    
+    @Html.ActionLink("Approve", "Approval", new {  id=Model.Claim_Id})
+</p>
+
+<div class="jumbotron"style="text-align:center; color:red">
+
+@if(Model.Approve == true)
+{
+    <h2 style="color:green">
+        Approved
+    </h2>
+}
+else
+{
+    <h2 style="color:red">
+        Not Yet Approved
+    </h2>
+}
+   
+</div>

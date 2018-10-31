@@ -1,0 +1,77 @@
+﻿@model E_Insurance.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Log in";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Administrator Login</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Smart Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+    <script type="application/x-javascript">
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Meta tag Keywords -->
+    <!-- css files -->
+    <link href="../../Content/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <!-- online-fonts -->
+    @*<link href="//fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900iSlabo+27px&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">*@
+    <!--//online-fonts -->
+</head>
+<body>
+    <!--header-->
+    <div class="agileheader">
+        <h1>Administrator Login</h1>
+    </div>
+    <!--//header-->
+    <!--main-->
+    <div class="main-w3l">
+        <div class="w3layouts-main">
+            <h2>Login Now</h2>
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "UserName", @type = "username" })
+                        @Html.ValidationMessageFor(m => m.UserName)
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password", @type = "Password" })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <input type="submit" value="login" name="login" style="font-family:Candara;font-weight:bolder">
+                </div>
+
+
+            }
+        </div>
+    </div>
+
+    <div class="footer-w3l">
+        <p style="font-weight:bolder; background-color:blue">&copy; @DateTime.Now.Year E_Insurance </p>
+    </div>
+    <!--//footer-->
+
+</body>
+</html>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

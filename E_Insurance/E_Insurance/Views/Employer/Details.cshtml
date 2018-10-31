@@ -1,0 +1,283 @@
+﻿@model E_Insurance.Models.Employer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employer</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employer_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employer_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incorporation_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incorporation_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Registration_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Registration_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Company_Logo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Company_Logo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Street_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Local_Govt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Local_Govt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Postal_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Postal_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fax_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fax_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SurName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SurName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tel_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tel_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mode_Of_Identification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mode_Of_Identification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Construction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Construction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Minning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Minning)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Banking_and_Finance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Banking_and_Finance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aviation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aviation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MDA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MDA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oil_and_Gas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Oil_and_Gas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Agriculture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agriculture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Energy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Energy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telecommunication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telecommunication)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Others)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Others)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Employer_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

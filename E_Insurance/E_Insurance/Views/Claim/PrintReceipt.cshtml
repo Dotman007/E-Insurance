@@ -1,0 +1,121 @@
+﻿@model E_Insurance.Models.Claim
+
+@{
+    ViewBag.Title = "PrintReceipt";
+    Layout = "~/Views/Shared/_LayoutEmployer.cshtml";
+}
+@{
+    
+    var emp_Id = Model.Employer.Employer_Name;
+    var empReg = Model.Employer.Registration_No;
+    var empAddress = Model.Employer.Address;
+    var employee_Name = Model.Employer.Employer_Name;
+    var employee_Salary = Model.Salary;
+    var approved = Model.Approve;
+    var surname = Model.Employee_Surname;
+    var firstname = Model.Employee_FirstName;
+    var middlename = Model.Employee_MiddleName;
+    var status = Model.Marital_Status;
+    var acctno = Model.Account_No;
+    var acctname = Model.Name_Of_Account;
+    var bank = Model.Bank_Name;
+     var myTitle = emp_Id + " " +" CLAIM RECEIPT";
+    
+}
+<input type="hidden" id="txtTitle" name="txtTitle" value="@myTitle" />
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">@myTitle</h3>
+    </div>
+
+
+    <div class="panel-body" id="dataexample3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label" style="font-weight: 300">EMPLOYER REG NO.:</label>
+                    &nbsp;<label class="control-label">@empReg</label>
+                </div>
+            </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label" style="font-weight: 300">EMPLOYEE SURNAME:</label>
+                            &nbsp;<label class="control-label">@surname</label>
+                        </div>
+                    </div>
+                    
+                                <div class="form-group">
+                                    <label class="control-label" style="font-weight: 300">FIRST NAME:</label>
+                                    &nbsp;<label class="control-label">@firstname</label>
+                                </div>
+                            </div>
+                            
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label" style="font-weight: 300">MIDDLE NAME:</label>
+                                            &nbsp;<label class="control-label">@middlename</label>
+                                        </div>
+                                    </div>
+
+                                    
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label" style="font-weight: 300">MARITAL STATUS:</label>
+                                                    &nbsp;<label class="control-label">@status</label>
+                                                </div>
+                                            </div>
+                                           
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" style="font-weight: 300">EMPLOYER NAME:</label>
+                &nbsp;<label class="control-label">@emp_Id</label>
+            </div>
+        </div>
+                                           
+      
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" style="font-weight: 300">ACCOUNT NAME:</label>
+                &nbsp;<label class="control-label">@status</label>
+            </div>
+        </div>
+                                          
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" style="font-weight: 300">ACCOUNT NUMBER:</label>
+                &nbsp;<label class="control-label">@acctno</label>
+            </div>
+        </div>
+                        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label" style="font-weight: 300">BANK NAME:</label>
+                &nbsp;<label class="control-label">@bank</label>
+            </div>
+        </div>                   
+                                         
+                                        </div>
+                                    </div>
+                                    <a id="printResult" class="btn btn-info">
+                                        <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print
+                                    </a>
+                                    @section Scripts {
+
+                                        <script src="~/Scripts/jquery-printme.js"></script>
+
+                                        <script type="text/javascript">
+
+                                            $("#printResult").click(function () {
+                                                var title = $("#txtTitle").val();
+                                                $("#dataexample3").printMe({
+                                                    "path": ["../../Content/print.css"],
+                                                    "title": title
+                                                });
+                                                return (false);
+                                            });
+
+                                        </script>
+                                    }

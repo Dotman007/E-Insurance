@@ -1,0 +1,79 @@
+﻿@model E_Insurance.Models.Employer
+
+@{
+    ViewBag.Title = "Login Page";
+    Layout = "~/Views/Shared/_LayoutReg.cshtml";
+}
+
+<style>
+    .page-head-line {
+        font-weight: 900;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #F0677C;
+        text-transform: uppercase;
+        color: #F0677C;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+</style>
+
+@*<div class="row">
+    <div class="col-md-12 text-center">
+        <h4 class="page-head-line">Please Login To Enter </h4>
+    </div>
+</div>*@
+
+<br />
+<br />
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading text-center" style="text-transform: uppercase;">Employer Login</div>
+                <div class="panel-body">
+
+                    @using (Html.BeginForm("EmployerLogin", "Employer", FormMethod.Post))
+                    {
+                        <div class="form-horizontal">
+                            <h3 style="color: red; text-align: center">@ViewBag.EmployerNotExist</h3>
+
+                            <div class="form-group">
+                                <label for="matric" class="control-label col-md-2">Reg. No.</label>
+                                <div class="col-md-10">
+                                    <input type="text" id="regNo" name="regNo" class="form-control" placeholder="Enter Registration No.">
+                                    <h5 class="text-danger">@ViewBag.Registration</h5>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="control-label col-md-2">Password</label>
+                                <div class="col-md-10">
+                                    <input type="password" id="pword" name="pword" class="form-control" placeholder="Enter Your Password">
+                                    <h5 class="text-danger">@ViewBag.Password</h5>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <button type="submit" class="btn btn-success">
+                                        Login <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <br />
+                                <br />
+                                <br />
+
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>  

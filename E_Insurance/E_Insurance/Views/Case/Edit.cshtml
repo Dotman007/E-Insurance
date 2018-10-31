@@ -1,0 +1,134 @@
+﻿@model E_Insurance.Models.Case
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Case</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Case_No, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Case_No)
+                @Html.ValidationMessageFor(model => model.Case_No)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Employee_Surname, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Employee_Surname)
+                @Html.ValidationMessageFor(model => model.Employee_Surname)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Employee_FirstName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Employee_FirstName)
+                @Html.ValidationMessageFor(model => model.Employee_FirstName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Employee_MiddleName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Employee_MiddleName)
+                @Html.ValidationMessageFor(model => model.Employee_MiddleName)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Salary, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Salary)
+                @Html.ValidationMessageFor(model => model.Salary)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Incident_Date, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Incident_Date)
+                @Html.ValidationMessageFor(model => model.Incident_Date)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Time_of_Incident, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Time_of_Incident)
+                @Html.ValidationMessageFor(model => model.Time_of_Incident)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Town, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Town)
+                @Html.ValidationMessageFor(model => model.Town)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LGA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LGA)
+                @Html.ValidationMessageFor(model => model.LGA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.State, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.State)
+                @Html.ValidationMessageFor(model => model.State)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Incident_Report_Date, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Incident_Report_Date)
+                @Html.ValidationMessageFor(model => model.Incident_Report_Date)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TypeOfIncident, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TypeOfIncident)
+                @Html.ValidationMessageFor(model => model.TypeOfIncident)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Employer_Id, "Employer_Id", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Employer_Id", String.Empty)
+                @Html.ValidationMessageFor(model => model.Employer_Id)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

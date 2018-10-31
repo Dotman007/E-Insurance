@@ -1,0 +1,44 @@
+﻿@model IEnumerable<E_Insurance.Models.Payment>
+
+@{
+    ViewBag.Title = "ViewPayments";
+    Layout = "~/Views/Shared/_LayoutEmployer.cshtml";
+}
+
+<h2>View Payments History</h2>
+<table class="table table-striped table-bordered" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employer.Employer_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee_Salary)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employer.Employer_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee_Salary)
+        </td>
+        <td>
+        <td>
+            <a href="/Payment/PrintReceipt/@item.Payment_Id" class="btn btn-info">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> View Receipt
+            </a>
+        </td>
+        
+    </tr>
+}
+
+</table>

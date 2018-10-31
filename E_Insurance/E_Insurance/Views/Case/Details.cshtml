@@ -1,0 +1,123 @@
+﻿@model E_Insurance.Models.Case
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Case</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employer.Employer_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employer.Employer_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Case_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Case_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incident_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incident_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time_of_Incident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time_of_Incident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Town)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Town)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LGA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LGA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Incident_Report_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incident_Report_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfIncident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfIncident)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
